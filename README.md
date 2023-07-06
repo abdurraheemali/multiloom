@@ -2,6 +2,39 @@
 
 Multiloom is a backend server for sharing [Loom](https://github.com/socketteer/loom) trees with a focus on collaborative writing. It is currently in early development and is not yet ready for use.
 
+## Quickstart
+
+1. Open a terminal at the root directory
+2. Get the poetry package manager:
+
+    **Linux:** 
+    ```
+    curl -sSL https://install.python-poetry.org | python3 -
+    ```
+
+    **Windows:**
+    ```
+    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py - 
+    ```
+
+3. Install dependencies in a virtual environment using
+
+```
+poetry install
+```
+
+4. Switch to the virtual environment using
+
+```
+poetry shell
+```
+
+5. Run the app
+
+```
+poetry run python server.py
+```
+
 ## Server
 
 The server-side code for Multiloom is contained in the `server.py` file. It defines several routes for handling HTTP requests, including creating, updating, and deleting nodes in a database, as well as retrieving all nodes after a given timestamp.

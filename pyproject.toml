@@ -1,0 +1,15 @@
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name = "multiloom"
+version = "0.0.1"
+description = "A server for sharing loom trees with a focus on collaborative writing"
+authors = ["gaspodethemad"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^2.0.1"
+python-dotenv = "^1.0.0"
+requests = "^2.30.0"

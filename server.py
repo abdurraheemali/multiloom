@@ -59,6 +59,12 @@ TREE_JSON = os.environ['TREE_JSON']
 SERVER_PORT = os.environ['SERVER_PORT']
 SERVER_PASSWORD_HASH = os.environ['SERVER_PASSWORD_HASH']
 
+def test_client():
+    """
+    Return a test client for the server.
+    """
+    return app.test_client()
+
 def delete_existing_database():
     """
     If TREE_JSON is specified, delete the existing database.
@@ -162,6 +168,9 @@ def close_db(error):
     if hasattr(g, 'sqlite_db'):
         g.sqlite_db.close()
 
+@app.route('/')
+def index():
+    return 'hello world'
 
 @app.route('/nodes', methods=['POST'])
 # Define a route for saving a set of new nodes to the database

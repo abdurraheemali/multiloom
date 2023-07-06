@@ -63,3 +63,4 @@ Please note that Multiloom is currently in early development and is not yet read
 ## TODO
 
 - [ ] Add support for loading Bonsai & python-Loom trees from JSON files.
+- [ ] Migrate to property based testing using hypothesis?
